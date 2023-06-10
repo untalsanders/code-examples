@@ -1,3 +1,5 @@
+package io.github.sandersgutierrez.network;
+
 import java.io.IOException;
 import java.net.Socket;
 import java.util.Scanner;
@@ -7,7 +9,10 @@ import java.util.Scanner;
  * Colorado and print the time that send the server.
  */
 public class TestSocket {
-    public static void main(String[] args) throws IOException {
+    /**
+     * @throws IOException IO exceptions
+     */
+    public static void start() throws IOException {
         var remoteAddress = "time-A.timefreq.bldrdoc.gov";
         var remotePort = 13;
 

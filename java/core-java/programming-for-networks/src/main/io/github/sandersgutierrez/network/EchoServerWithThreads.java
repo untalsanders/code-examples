@@ -1,3 +1,5 @@
+package io.github.sandersgutierrez.network;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
@@ -11,7 +13,10 @@ public class EchoServerWithThreads {
     /**
      * This class handles the client inputs for a connection.
      */
-    private static class EchoServerWithThreadsHandler implements Runnable {
+    protected static class EchoServerWithThreadsHandler implements Runnable {
+        /**
+         * @hidden
+         */
         private final Socket socket;
         private final int counter;
 
@@ -56,7 +61,10 @@ public class EchoServerWithThreads {
         }
     }
 
-    public static void main(String[] args) throws IOException {
+    /**
+     * Start a socket server to serve connections of clients.
+     */
+    public static void startServer() throws IOException {
         try (var ss = new ServerSocket(8189)) {
             int i = 1;
             while (true) {
