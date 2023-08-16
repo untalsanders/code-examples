@@ -2,7 +2,7 @@
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
             <Pattern>
-                %d{yyyy-MM-dd'T'HH:mm:ss.SSSXXX} %highlight(%-5level) --- [ %yellow(%t) ] %cyan(%-30(%logger{36})) : %msg%n
+                %d{yyyy-MM-dd'T'HH:mm:ss.SSSXXX} %highlight(%level) [ %yellow(%t) ] --- %cyan(%-30(%logger{30})) : %msg%n
             </Pattern>
         </encoder>
     </appender>
