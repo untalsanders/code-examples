@@ -10,6 +10,3 @@ trim_trailing_whitespace = true
 [*.java]
 indent_size = 4
 indent_style = space
-
-[**/resources/**/*.xml]
-max_line_length = off
